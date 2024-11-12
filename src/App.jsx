@@ -1,12 +1,19 @@
 import './App.css'
+import { Link } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Ship from './pages/Ship'
+
 
 function App() {
-
   return (
-    <>
-    <nav>
+    <div className="App">
+    <Router>
+      <nav>
       <div>
-        <img src="/logo2.png" width={100} alt="" />
+        <Link to={"/"}>
+        <img src="/sih/logo2.png" width={100} alt="" />
+        </Link>
         <div style={{display:"flex", gap:"1rem", marginRight:"1rem", alignItems:"center"}}>
           <p>About Us</p>
           <p>Our Team</p>
@@ -15,18 +22,13 @@ function App() {
         </div>
       </div>
     </nav>
-    <br />
-      <img className='bg' src="/bg2.jpg" alt="" />
-      <h1 style={{color:"white"}}>Oil-SENTRY: Real-Time Oil Spill Detection and Prevention</h1>
-      <h3 style={{color:"white", opacity:"0.6"}}>Empowering authorities to protect the environment through advanced AI and satellite technology</h3>
-      <input type="text" name="" id="" placeholder='IMO number' /> 
-      <div style={{display: "flex", gap:"1rem", justifyContent:"center"}}>  
-        <a target='_blank' href="https://www.noaa.gov/education/resource-collections/ocean-coasts/oil-spills">
-          <button>Learn More</button>
-        </a>
-        <button>Demo</button>
-      </div>
-    </>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/ship' element={<Ship />} />
+        <Route path='*' element={<h1>Page Not Found!!</h1>} />
+      </Routes>
+    </Router>
+    </div>
   )
 }
 

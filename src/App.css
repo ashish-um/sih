@@ -3,9 +3,9 @@
 #root {
   font-family: "Poppins", sans-serif;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 nav{
@@ -13,7 +13,7 @@ nav{
   top:0;
   left:0;
   width: 100%;
-  background: #06133f6d ;
+  background: #06133f ;
   color: white;
   border-bottom: 1px solid;
 }
@@ -44,7 +44,7 @@ div p:hover{
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.6;
+  filter: brightness(70%);
 }
 
 input{
@@ -100,4 +100,10 @@ input:hover, input:focus{
 
 .read-the-docs {
   color: #888;
+}
+
+.mgrid h3{
+  border: 2px solid black;
+  padding: 10px;
+  margin: 0;
 }
