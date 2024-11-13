@@ -33,9 +33,9 @@ function Ship() {
 
   return (
     <>
-    <br /><br />
-    <div style={{display: "flex"}}>
-        <video width={580} src="https://cdn.pixabay.com/video/2024/08/17/226821_tiny.mp4"></video>
+    <br /><br /><br />
+    <div style={{display: "flex", gap:"10rem", margin:"auto"}}>
+        <video autoPlay muted loop controls={false} width={580} src="/sih/vid.mp4"></video>
         <div>
             <div className='mgrid' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0', width: '80%', margin: '0 auto' }}>
                 <h3>Vessel Name:  <span style={{color:"#2a5fff"}}>Sea Explorer</span></h3>
